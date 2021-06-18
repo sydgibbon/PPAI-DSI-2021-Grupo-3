@@ -41,5 +41,5 @@ class Entrada():
     def setnumero(self,x):
         self.numero = x
 
-    def conocerGuiaAsignado():
+    def conocerGuiaAsignado(self):
         return
