@@ -1,4 +1,3 @@
-
 from registrarventadeentrada.Museo import TipoEntrada
 
 

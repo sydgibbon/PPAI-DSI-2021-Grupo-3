@@ -4,6 +4,7 @@ class Sede:
     cantMaximaVisitantes = 0
     cantMaxPorGuia = 0
     nombre = ""
+    tarfia = None
 
     "Metodos de la clase Sede"
 
@@ -25,9 +26,15 @@ class Sede:
 
     def conocerExposicion(self):
         None
+
     def buscarDuracionExposicion(self):
         None
+
     def buscarExposicion(self):
         None
+
     def calcularDuracionExposicionVigentes(self):
+        None
+
+    def obtenerTarfiasVigentes(self):
         None
