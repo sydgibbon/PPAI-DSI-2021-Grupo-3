@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Usuario\Documents\PPAI-DSI\env"
+VIRTUAL_ENV="C:\Users\Usuario\Documents\GitHub\PPAI-DSI-2021-Grupo-3\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
