@@ -4,7 +4,7 @@ class Sede:
     cantMaximaVisitantes = 0
     cantMaxPorGuia = 0
     nombre = ""
-    tarfia = None
+    tarifa = None
 
     "Metodos de la clase Sede"
 
@@ -36,5 +36,10 @@ class Sede:
     def calcularDuracionExposicionVigentes(self):
         None
 
-    def obtenerTarfiasVigentes(self):
-        None
+    def obtenerTarifasVigentes(self):
+        #Hay que revisar cuales son las tarifas vigentes y poner una condicion
+        tarifas_vigentes = []
+        for t in self.tarifa:
+            tarifas_vigentes.append(t.mostarMontosVigente())
+        return tarifas_vigentes
+

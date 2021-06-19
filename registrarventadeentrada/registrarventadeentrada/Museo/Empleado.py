@@ -22,3 +22,6 @@ class Empleado():
 
     def getNombre(self):
         return self.nombre
+
+    def obtenerSede(self):
+        None

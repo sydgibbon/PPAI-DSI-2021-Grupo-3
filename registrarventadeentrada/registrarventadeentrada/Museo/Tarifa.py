@@ -45,5 +45,12 @@ class Tarifa():
         
     def setmontoAdicionalGuia(self,x): 
         self.montoAdicionalGuia = x
+
+    def mostrarMontosVigentes(self):
+        monto = self.getmonto()
+        entrada = self.tipoDeEntrada.getNombre()
+        tipovisita = self.tipoVisita.getnombre()
+        tarifa = (monto,entrada,tipovisita)
+        return tarifa
     
     

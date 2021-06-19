@@ -4,7 +4,10 @@ class GestorVentaDeEntrada:
     empleadoLogueado = GestorVentaDeEntrada.buscarEmpleadoLogueado()
     entradas = None
     sesionActual = None
-    tarifas = None
+    sedeActual = GestorVentaDeEntrada.buscarSede()
+    tarifas = GestorVentaDeEntrada.buscarTarifasDeSede() #Esto hay que mostrarlo
+    tarifas_seleccionadas = None
+
 
 
     #MetodosGestor
@@ -20,16 +23,18 @@ class GestorVentaDeEntrada:
         return empleado
 
     def buscarExposicionVigente(self):
-        None
+        duracion = self.sedeActual.calcularDuracionExposicionVigentes()
 
     def buscarReservasParaAsistir(self):
         None
 
     def buscarSede(self):
-        None
+        sedeActual = self.empleadoLogueado.obtenerSede()
+        return sedeActual
 
     def buscarTarifasDeSede(self):
-        None
+        tarifas = self.sedeActual.obtenerTarifasVigentes()
+        return tarifas
 
     def buscarUltimoNroEntrada(self):
         None
