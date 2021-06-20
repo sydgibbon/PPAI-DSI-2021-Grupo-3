@@ -1,6 +1,8 @@
+from django.http import HttpResponse
 
 # Utilities
 from datetime import datetime
+from .models import DetalleExposicion
 from django.shortcuts import render
 
 posts = [
@@ -36,5 +38,16 @@ def index(request):
     )
 
 
+def hello_world(request):
+    return HttpResponse('hello world', hello_world)
+
 def list_posts(request):
-    return render(request, 'index.html')
+    """List existing posts."""
+    content = []
+    for post in posts:
+        content.append("""
+            <p><strong>{name}</strong></p>
+            <p><small>{user} - <i>{timestamp}</i></small></p>
+            <figure><img src="{picture}"/></figure>
+        """.format(**post))
+    return HttpResponse('<br>'.join(content))
