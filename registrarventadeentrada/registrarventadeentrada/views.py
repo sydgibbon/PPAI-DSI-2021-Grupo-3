@@ -38,4 +38,4 @@ def index(request):
 
 
 def list_posts(request):
-    return render(request, 'index.html', {'posts': posts})
+    return render(request, 'template.html', {'posts': posts})
