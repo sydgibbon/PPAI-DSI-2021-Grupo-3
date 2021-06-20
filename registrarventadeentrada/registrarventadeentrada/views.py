@@ -37,4 +37,4 @@ def index(request):
 
 
 def list_posts(request):
-    return render(request, 'index.html')
+    return render(request, 'index.html', {'name': 'Sydney'})
