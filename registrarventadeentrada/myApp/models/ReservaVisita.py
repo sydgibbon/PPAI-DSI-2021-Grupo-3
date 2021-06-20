@@ -1,14 +1,14 @@
 from django.db import models
 
 class ReservaVisita:
-    cantidadAlumnos = models.IntegerField
-    cantidadAlumnosConfirmada = models.IntegerField
-    duracionEstimada = models.IntegerField
-    fechaHoraCreacion = models.DateField
-    fechaHoraReserva = models.DateField
-    horaFinReal = models.IntegerField
-    horaInicioReal = models.IntegerField
-    numeroReserva = models.IntegerField
+    cantidadAlumnos = models.IntegerField()
+    cantidadAlumnosConfirmada = models.IntegerField()
+    duracionEstimada = models.DateField()
+    fechaHoraCreacion = models.DateField()
+    fechaHoraReserva = models.DateField()
+    horaFinReal = models.DateField()
+    horaInicioReal = models.DateField()
+    numeroReserva = models.IntegerField()
 
     def getCantidadAlumnos(self):
         return self.cantidadAlumnos

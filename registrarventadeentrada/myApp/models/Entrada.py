@@ -1,18 +1,18 @@
 from django.db import models
 
-from registrarventadeentrada.models.Sede import Sede
+from registrarventadeentrada.myApp.models.Sede import Sede
 
 
 class Entrada():
 
     #Atributos
     
-    fechaVenta = models.DateField
-    horaVenta = models.IntegerField
-    monto = models.IntegerField
-    numero = models.IntegerField
+    fechaVenta = models.DateField()
+    horaVenta = models.DateField()
+    monto = models.IntegerField()
+    numero = models.IntegerField()
     sede = Sede
-    tarifa = models.IntegerField
+    tarifa = models.IntegerField()
 
     #Metodos
 

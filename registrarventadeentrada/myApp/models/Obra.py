@@ -2,17 +2,17 @@ from django.db import models
 
 class Obra:
     "Atributos de la clase Obra"
-    alto = models.IntegerField
-    ancho = models.IntegerField
-    codigoSensor = models.CharField
-    descripcion = models.CharField
-    duracionExtendida = models.IntegerField
-    duracionResumida = models.IntegerField
-    fechaCreacion = models.DateField
-    fechaPrimerIngreso = models.DateField
-    nombreObra = models.CharField
-    peso = models.IntegerField
-    valuacion = models.CharField
+    alto = models.IntegerField()
+    ancho = models.IntegerField()
+    codigoSensor = models.CharField()
+    descripcion = models.CharField()
+    duracionExtendida = models.DateField()
+    duracionResumida = models.DateField()
+    fechaCreacion = models.DateField()
+    fechaPrimerIngreso = models.DateField()
+    nombreObra = models.CharField()
+    peso = models.IntegerField()
+    valuacion = models.CharField()
 
     "Metodos de la clase Obra"
 

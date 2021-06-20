@@ -1,7 +1,7 @@
 from django.db import models
 
-from registrarventadeentrada.models import TipoEntrada
-from registrarventadeentrada.models.TipoVisita import TipoVisita
+from registrarventadeentrada.myApp.models import TipoEntrada
+from registrarventadeentrada.myApp.models.TipoVisita import TipoVisita
 
 
 class Tarifa():
@@ -9,8 +9,8 @@ class Tarifa():
     #Atributos de la clase Tarifa
     fechaFinVigencia = models.DateField()
     fechaInicioVigencia= models.DateField()
-    monto = models.IntegerField
-    montoAdicionalGuia = models.IntegerField
+    monto = models.IntegerField()
+    montoAdicionalGuia = models.IntegerField()
     tipoDeEntrada = TipoEntrada
     tipoVisita = TipoVisita
 
