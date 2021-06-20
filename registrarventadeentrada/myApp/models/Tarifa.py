@@ -1,7 +1,7 @@
 from django.db import models
 
-from registrarventadeentrada.myApp.models import TipoEntrada
-from registrarventadeentrada.myApp.models.TipoVisita import TipoVisita
+from .TipoEntrada import TipoEntrada
+from .TipoVisita import TipoVisita
 
 
 class Tarifa():

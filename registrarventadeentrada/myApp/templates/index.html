@@ -36,7 +36,9 @@
           </div>
         </div>
       </div>
-  
+      {% for post in posts %}
+        {{ post.name }}
+      {% endfor %}
       <h2 class="display-6 text-center mb-4">Cantidad de entradas</h2>
   <!--
   </body>

@@ -1,6 +1,6 @@
 from django.db import models
 
-from registrarventadeentrada.myApp.models.Sede import Sede
+from .Sede import Sede
 
 
 class Entrada():

@@ -24,6 +24,7 @@ posts = [
     }
 ]
 
+
 def index(request):
     """
     Función vista para la página inicio del sitio.
@@ -37,4 +38,4 @@ def index(request):
 
 
 def list_posts(request):
-    return render(request, 'index.html', {'name': 'Sydney'})
+    return render(request, 'index.html', {'posts': posts})
