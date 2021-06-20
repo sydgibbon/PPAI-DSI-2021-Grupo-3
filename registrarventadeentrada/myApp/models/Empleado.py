@@ -1,4 +1,5 @@
 from django.db import models
+from .Sede import Sede
 
 class Empleado(models.Model):
     nombre = models.CharField(max_length=100)
@@ -11,6 +12,7 @@ class Empleado(models.Model):
     fecha_nacimiento = models.DateField()
     mail = models.EmailField()
     sexo = models.CharField(max_length=100)
+    sede_id = models.IntegerField()
 
     #MetodosEmpleado
     def conocerCargo(self):
@@ -26,4 +28,5 @@ class Empleado(models.Model):
         return self.nombre
 
     def obtenerSede(self):
-        None
+        sede = Sede.objects.get(id=self.sede_id)
+        return sede

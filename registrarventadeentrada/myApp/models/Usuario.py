@@ -1,4 +1,5 @@
 from django.db import models
+from .Empleado import Empleado
 
 class Usuario(models.Model):
     nombre = models.CharField(max_length=100)
@@ -10,5 +11,5 @@ class Usuario(models.Model):
         None
 
     def obtenerEmpleado(self):
-        None
+        empleado = Empleado.objects.get(id=dni)
 

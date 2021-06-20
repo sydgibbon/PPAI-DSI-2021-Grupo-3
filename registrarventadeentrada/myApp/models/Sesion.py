@@ -1,4 +1,5 @@
 from django.db import models
+from .Usuario import Usuario
 
 class Sesion(models.Model):
     fecha_fin = models.DateField()
@@ -11,4 +12,5 @@ class Sesion(models.Model):
         None
 
     def getEmpleadoEnSesion(self):
-        None
+        empleado = Usuario.obtenerEmpleado()
+        return empleado

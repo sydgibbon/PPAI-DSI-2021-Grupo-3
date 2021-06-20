@@ -1,4 +1,4 @@
-from registrarventadeentrada.registrarventadeentrada.Museo import Sesion
+from registrarventadeentrada.myApp.models.Sesion import Sesion
 
 class GestorVentaDeEntrada:
     empleadoLogueado = GestorVentaDeEntrada.buscarEmpleadoLogueado()
@@ -18,12 +18,11 @@ class GestorVentaDeEntrada:
         None
 
     def buscarEmpleadoLogueado(self):
-        sesionActual = actual.getEmpleadoEnSesion()
-        empleado = sesionActual.obtenerEmpleado()
+        empleado = Sesion.getEmpleadoEnSesion()
         return empleado
 
     def buscarExposicionVigente(self):
-        duracion = self.sedeActual.calcularDuracionExposicionVigentes()
+        None
 
     def buscarReservasParaAsistir(self):
         None
@@ -33,8 +32,7 @@ class GestorVentaDeEntrada:
         return sedeActual
 
     def buscarTarifasDeSede(self):
-        tarifas = self.sedeActual.obtenerTarifasVigentes()
-        return tarifas
+        None
 
     def buscarUltimoNroEntrada(self):
         None
