@@ -3,7 +3,7 @@ from django.db import models
 from .Sede import Sede
 
 
-class Entrada():
+class Entrada(models.Model):
 
     #Atributos
     

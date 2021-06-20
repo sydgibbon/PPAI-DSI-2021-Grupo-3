@@ -4,7 +4,7 @@ from .TipoEntrada import TipoEntrada
 from .TipoVisita import TipoVisita
 
 
-class Tarifa():
+class Tarifa(models.Model):
 
     #Atributos de la clase Tarifa
     fechaFinVigencia = models.DateField()

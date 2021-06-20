@@ -40,10 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'registrarventadeentrada',
-
-    #Customized apps
     'bootstrap4',
-    'myApp'
+    'myApp.apps.MyappConfig'
 ]
 
 MIDDLEWARE = [

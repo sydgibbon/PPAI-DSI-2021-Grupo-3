@@ -1,10 +1,10 @@
 from django.db import models
 
-class TipoVisita():
+class TipoVisita(models.Model):
 
     #Atributos
     
-    nombre = models.CharField()
+    nombre = models.CharField(max_length=100)
     
     #Metodos 
     

@@ -1,6 +1,6 @@
 from django.db import models
 
-class Sesion():
+class Sesion(models.Model):
     fecha_fin = models.DateField()
     fecha_inicio = models.DateField()
     hora_fin = models.DateField()

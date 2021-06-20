@@ -1,7 +1,8 @@
 from django.db import models
 
-class DetalleExposicion():
-    lugar_asignado = models.CharField()
+class DetalleExposicion(models.Model):
+    
+    lugar_asignado = models.CharField(max_length=100)
 
     #MetodosDetalleExposicion
     def buscarDuracionExtraObra(self):

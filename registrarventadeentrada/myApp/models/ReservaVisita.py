@@ -1,6 +1,6 @@
 from django.db import models
 
-class ReservaVisita:
+class ReservaVisita(models.Model):
     cantidadAlumnos = models.IntegerField()
     cantidadAlumnosConfirmada = models.IntegerField()
     duracionEstimada = models.DateField()
