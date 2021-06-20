@@ -1,14 +1,16 @@
+from django.db import models
+
 class Empleado():
-    nombre = None
-    apellido = ""
-    codigo_validacion = None
-    cuit = None
-    dni = None
-    domicilio = None
-    fecha_ingreso = None
-    fecha_nacimiento = None
-    mail = None
-    sexo = None
+    nombre = models.CharField
+    apellido = models.CharField
+    codigo_validacion = models.CharField
+    cuit = models.IntegerField
+    dni = models.IntegerField
+    domicilio = models.CharField
+    fecha_ingreso = models.DateField
+    fecha_nacimiento = models.DateField
+    mail = models.EmailField
+    sexo = models.CharField
 
     #MetodosEmpleado
     def conocerCargo(self):

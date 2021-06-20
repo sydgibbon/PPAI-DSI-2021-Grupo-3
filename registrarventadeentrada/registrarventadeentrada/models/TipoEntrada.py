@@ -1,9 +1,10 @@
+from django.db import models
 
 class TipoEntrada():
 
     #Atributos
     
-    nombre = None
+    nombre = models.CharField()
     
     #Metodos 
     

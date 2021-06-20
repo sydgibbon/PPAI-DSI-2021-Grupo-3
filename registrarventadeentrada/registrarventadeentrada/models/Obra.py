@@ -1,16 +1,18 @@
+from django.db import models
+
 class Obra:
     "Atributos de la clase Obra"
-    alto = 0
-    ancho = 0
-    codigoSensor = None
-    descripcion = ""
-    duracionExtendida = 0
-    duracionResumida = 0
-    fechaCreacion = None
-    fechaPrimerIngreso = None
-    nombreObra = ""
-    peso = 0
-    valuacion = 0
+    alto = models.IntegerField
+    ancho = models.IntegerField
+    codigoSensor = models.CharField
+    descripcion = models.CharField
+    duracionExtendida = models.IntegerField
+    duracionResumida = models.IntegerField
+    fechaCreacion = models.DateField
+    fechaPrimerIngreso = models.DateField
+    nombreObra = models.CharField
+    peso = models.IntegerField
+    valuacion = models.CharField
 
     "Metodos de la clase Obra"
 

@@ -1,18 +1,21 @@
-from registrarventadeentrada.Museo import TipoEntrada
+from django.db import models
+
+from registrarventadeentrada.models import TipoEntrada
+from registrarventadeentrada.models.TipoVisita import TipoVisita
 
 
 class Tarifa():
 
     #Atributos de la clase Tarifa
-    fechaFinVigencia = None
-    fechaInicioVigencia= None
-    monto = 0
-    montoAdicionalGuia = 0
-    tipoDeEntrada = None
-    tipoVisita = None
+    fechaFinVigencia = models.DateField()
+    fechaInicioVigencia= models.DateField()
+    monto = models.IntegerField
+    montoAdicionalGuia = models.IntegerField
+    tipoDeEntrada = TipoEntrada
+    tipoVisita = TipoVisita
 
     #Metodos
-    def new():
+    def new(self):
         return
     
     def getfechaFinVigencia(self):

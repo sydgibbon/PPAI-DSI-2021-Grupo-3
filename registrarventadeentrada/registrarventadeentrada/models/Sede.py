@@ -1,10 +1,12 @@
+from django.db import models
+
 class Sede:
 
     "Atributos de la clase Sede"
-    cantMaximaVisitantes = 0
-    cantMaxPorGuia = 0
-    nombre = ""
-    tarifa = None
+    cantMaximaVisitantes = models.IntegerField()
+    cantMaxPorGuia = models.IntegerField()
+    nombre = models.CharField()
+    tarifa = models.IntegerField()
 
     "Metodos de la clase Sede"
 

@@ -1,7 +1,9 @@
+from django.db import models
+
 class Usuario():
-    nombre = None
-    password = None
-    caducidad = None
+    nombre = models.CharField()
+    password = models.CharField()
+    caducidad = models.CharField()
 
     #MetodosUsuario
     def conocerEmpleado(self):

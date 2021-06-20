@@ -1,8 +1,10 @@
+from django.db import models
+
 class Sesion():
-    fecha_fin = None
-    fecha_inicio = None
-    hora_fin = None
-    hora_inicio = None
+    fecha_fin = models.DateField
+    fecha_inicio = models.DateField
+    hora_fin = models.SmallIntegerField
+    hora_inicio = models.SmallIntegerField
 
     #MetodosSesion
     def conocerUsuario(self):
