@@ -2,6 +2,7 @@
 # Utilities
 from datetime import datetime
 from django.shortcuts import render
+from myApp import views as app_views
 
 posts = [
     {
@@ -33,7 +34,7 @@ def index(request):
     # Renderiza la plantilla HTML index.html con los datos en la variable contexto
     return render(
         request,
-        'tarifas/main.html',
+        'tarifas/main.html', {'tarifas' : app_views.getTarifas()}
     )
 
 
