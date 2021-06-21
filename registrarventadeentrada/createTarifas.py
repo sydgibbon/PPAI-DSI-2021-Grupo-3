@@ -18,8 +18,8 @@ tarifas = [
     },
     ] 
     
-    from myApp.models import Tarifa
 
-    for tarifa in tarifas:
-        obj = Tarifa.objects.create(**tarifa)
-        print(obj.pk)
+from myApp.models import Tarifa
+for tarifa in tarifas:
+    obj = Tarifa.objects.create(**tarifa)
+    print(obj.pk)
