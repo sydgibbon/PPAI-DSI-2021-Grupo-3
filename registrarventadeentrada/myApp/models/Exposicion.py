@@ -1,4 +1,5 @@
 from django.db import models
+from .DetalleExposicion import DetalleExposicion
 
 class Exposicion(models.Model):
     nombre = models.CharField(max_length=100)
@@ -11,8 +12,12 @@ class Exposicion(models.Model):
 
     #MetodosClaseExposicion
     def calcularDuracionObrasExpuestas(self):
-        None
+        detalles = DetalleExposicion.objects.get("poner condicion que establezca la relacion entre la exposicion con sus detalles")
+        for d in detalles:
+            duracion_obras = detalles.BuscarDuracionObra()
+        return duracion_obras
 
     def esVigente(self):
-        None
+        exposiciones_vigentes = Exposicion.objects.get("poner condicion que permita extraer las exp vigentes")
+        return exposiciones_vigentes
 
