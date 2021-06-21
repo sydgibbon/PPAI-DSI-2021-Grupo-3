@@ -11,8 +11,7 @@ class Tarifa(models.Model):
     fechaInicioVigencia= models.DateField()
     monto = models.IntegerField()
     montoAdicionalGuia = models.IntegerField()
-    tipoDeEntrada = TipoEntrada
-    tipoVisita = TipoVisita
+
 
     #Metodos
     def new(self):
@@ -51,9 +50,10 @@ class Tarifa(models.Model):
 
     def mostrarMontosVigentes(self):
         monto = self.getmonto()
-        entrada = self.tipoDeEntrada.getNombre()
-        tipovisita = self.tipoVisita.getnombre()
+        entrada = TipoEntrada.getnombre()
+        tipovisita = TipoVisita.getnombre()
         tarifa = (monto,entrada,tipovisita)
         return tarifa
-    
+
+
     

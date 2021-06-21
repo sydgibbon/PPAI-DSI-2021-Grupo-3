@@ -1,4 +1,5 @@
 from django.db import models
+from .Obra import Obra
 
 class DetalleExposicion(models.Model):
     
@@ -13,3 +14,7 @@ class DetalleExposicion(models.Model):
 
     def conocerPared(self):
         None
+
+    def buscarDuracionObra(self):
+        duracion = Obra.getDuracionResumida()
+        return duracion

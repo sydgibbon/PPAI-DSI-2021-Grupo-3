@@ -11,6 +11,7 @@ class Sesion(models.Model):
     def conocerUsuario(self):
         None
 
+
     def getEmpleadoEnSesion(self):
         empleado = Usuario.obtenerEmpleado()
         return empleado

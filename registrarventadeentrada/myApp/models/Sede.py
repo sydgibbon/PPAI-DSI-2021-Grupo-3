@@ -1,4 +1,6 @@
 from django.db import models
+from .Tarifa import Tarifa
+from .Exposicion import Exposicion
 
 class Sede(models.Model):
 
@@ -36,12 +38,15 @@ class Sede(models.Model):
         None
 
     def calcularDuracionExposicionVigentes(self):
-        None
+        exposiciones_vigentes = Exposicion.esVigente()
+        for exp in exposiciones_vigentes:
+            duracion = exp.calcularDuracionObrasExpuestas()
+        return duracion
 
     def obtenerTarifasVigentes(self):
-        #Hay que revisar cuales son las tarifas vigentes y poner una condicion
-        tarifas_vigentes = []
-        for t in self.tarifa:
-            tarifas_vigentes.append(t.mostarMontosVigente())
-        return tarifas_vigentes
+        tarifas_vigentes = Tarifa.objects.get('poner condicion que permita extraer las tarifas vigentes de la bd')
+        for t in tarifas_vigentes:
+            tarifa = t.mostrarMontosVigentes()
+        return tarifa
+
 

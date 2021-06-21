@@ -30,3 +30,4 @@ class Empleado(models.Model):
     def obtenerSede(self):
         sede = Sede.objects.get(id=self.sede_id)
         return sede
+
