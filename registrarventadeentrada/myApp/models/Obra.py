@@ -1,4 +1,5 @@
 from django.db import models
+from .Empleado import Empleado
 
 class Obra(models.Model):
     "Atributos de la clase Obra"
@@ -13,6 +14,7 @@ class Obra(models.Model):
     nombreObra = models.CharField(max_length=100)
     peso = models.IntegerField()
     valuacion = models.CharField(max_length=100)
+    empleado_creo = models.ForeignKey(Empleado, on_delete=models.CASCADE, null=True)
 
     "Metodos de la clase Obra"
 

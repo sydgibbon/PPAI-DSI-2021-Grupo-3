@@ -1,5 +1,5 @@
 from django.db import models
-
+from .Tarifa import Tarifa
 from .Sede import Sede
 
 
@@ -11,8 +11,8 @@ class Entrada(models.Model):
     horaVenta = models.DateField()
     monto = models.IntegerField()
     numero = models.IntegerField()
-    sede = Sede
-    tarifa = models.IntegerField()
+    sede = models.ForeignKey(Sede, on_delete=models.CASCADE, null=True)
+    tarifa = models.ForeignKey(Tarifa, on_delete=models.CASCADE, null=True)
 
     #Metodos
 

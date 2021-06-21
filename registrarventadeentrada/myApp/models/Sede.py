@@ -1,6 +1,7 @@
 from django.db import models
 from .Tarifa import Tarifa
 from .Exposicion import Exposicion
+from .Empleado import Empleado
 
 class Sede(models.Model):
 
@@ -8,7 +9,9 @@ class Sede(models.Model):
     cantMaximaVisitantes = models.IntegerField()
     cantMaxPorGuia = models.IntegerField()
     nombre = models.CharField(max_length=100)
-    tarifa = models.IntegerField()
+    empleado_creo = models.ForeignKey(Empleado, on_delete=models.CASCADE, null=True)
+    tarifa = models.ForeignKey(Tarifa, on_delete=models.CASCADE, null=True)
+    exposicion = models.ForeignKey(Exposicion, on_delete=models.CASCADE, null = True)
 
     "Metodos de la clase Sede"
 

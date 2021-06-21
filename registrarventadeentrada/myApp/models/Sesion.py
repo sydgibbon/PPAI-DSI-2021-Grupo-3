@@ -6,6 +6,7 @@ class Sesion(models.Model):
     fecha_inicio = models.DateField()
     hora_fin = models.DateField()
     hora_inicio = models.DateField()
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, null=True)
 
     #MetodosSesion
     def conocerUsuario(self):

@@ -11,6 +11,8 @@ class Tarifa(models.Model):
     fechaInicioVigencia= models.DateField()
     monto = models.IntegerField()
     montoAdicionalGuia = models.IntegerField()
+    tipoEntrada = models.ForeignKey(TipoEntrada, on_delete=models.CASCADE, null=True)
+    tipoVisita = models.ForeignKey(TipoVisita, on_delete=models.CASCADE, null=True)
 
 
     #Metodos

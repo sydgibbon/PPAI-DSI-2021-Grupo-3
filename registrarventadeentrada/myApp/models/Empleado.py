@@ -1,5 +1,5 @@
 from django.db import models
-from .Sede import Sede
+#from .Sede import Sede
 
 class Empleado(models.Model):
     nombre = models.CharField(max_length=100)
@@ -12,7 +12,8 @@ class Empleado(models.Model):
     fecha_nacimiento = models.DateField()
     mail = models.EmailField()
     sexo = models.CharField(max_length=100)
-    sede_id = models.IntegerField()
+    #sede = models.ForeignKey(Sede, on_delete=models.CASCADE, null=True)
+
 
     #MetodosEmpleado
     def conocerCargo(self):

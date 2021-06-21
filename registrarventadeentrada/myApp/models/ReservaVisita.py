@@ -1,4 +1,5 @@
 from django.db import models
+#from .Sede import Sede
 
 class ReservaVisita(models.Model):
     cantidadAlumnos = models.IntegerField()
@@ -9,6 +10,7 @@ class ReservaVisita(models.Model):
     horaFinReal = models.DateField()
     horaInicioReal = models.DateField()
     numeroReserva = models.IntegerField()
+    #sede = models.ForeignKey(Sede, on_delete=models.CASCADE)
 
     def getCantidadAlumnos(self):
         return self.cantidadAlumnos

@@ -4,6 +4,8 @@ from .Obra import Obra
 class DetalleExposicion(models.Model):
     
     lugar_asignado = models.CharField(max_length=100)
+    obra = models.ForeignKey(Obra, on_delete=models.CASCADE, null=True)
+
 
     #MetodosDetalleExposicion
     def buscarDuracionExtraObra(self):
