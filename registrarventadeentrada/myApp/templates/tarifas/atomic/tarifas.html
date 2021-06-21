@@ -1,3 +1,4 @@
+{%load tarifa_tags%}
 <div class="container">
   <div class="row row-cols-md-3 mb-3 text-center">
     {%for tarifa in tarifas%}
@@ -11,10 +12,14 @@
             Monto: "{{tarifa.monto}}"
           </h3>
           <h3 class="card-title pricing-card-title">
-            Monto con guia: "{{tarifa.monto}}"
+            Monto con guia: "{% add tarifa.monto tarifa.montoAdicionalGuia %}"
           </h3>
-          <p class="fs-5 text-muted" style="font-size: 130%">{{tarifa.tipoEntrada.nombre}}</p>
-          <p class="fs-5 text-muted" style="font-size: 130%">{{tarifa.tipoVisita.nombre}}</p>
+          <p class="fs-5 text-muted" style="font-size: 130%">
+            {{tarifa.tipoEntrada.nombre}}
+          </p>
+          <p class="fs-5 text-muted" style="font-size: 130%">
+            {{tarifa.tipoVisita.nombre}}
+          </p>
           <button type="button" class="w-100 btn btn-lg btn-primary">
             Seleccionar
           </button>

@@ -16,6 +16,3 @@ def index(request):
         'tarifas/main.html', {'tarifas' : app_views.getTarifas()}
     )
 
-
-def tarifas(request):
-    return render(request, 'tarifas/tarifas.html', {'posts': posts})
