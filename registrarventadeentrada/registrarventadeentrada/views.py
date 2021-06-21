@@ -33,9 +33,9 @@ def index(request):
     # Renderiza la plantilla HTML index.html con los datos en la variable contexto
     return render(
         request,
-        'index.html',
+        'tarifas/tarifas.html',
     )
 
 
 def list_posts(request):
-    return render(request, 'template.html', {'posts': posts})
+    return render(request, 'tarifas/tarifas.html', {'posts': posts})

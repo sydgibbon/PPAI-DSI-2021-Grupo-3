@@ -1,14 +1,70 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        
-    </body>
+{% load bootstrap4 %}
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  {% bootstrap_css %}
+  {% block head_content %}
+{% endblock %}  
+  </head>
+  <body>
+    
+<main>
+<!-- Grilla con tarifas -->
+<body>
+{% include "navbar.html" %}
+  <header>
+      <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal">Registrar Venta de Entradas {{ name }}</h1>
+        <p class="fs-5 text-muted"style="font-size:200%;">Hola que hace, esto es una prueba xD</p>
+      </div>
+    </header>
+
+  <!-- Primer pantalla-->
+    <main>
+     {% block first_screen %}
+     {% endblock %}
+    </main>
+      <!-- Segunda pantalla-->
+   <!-- Una vez elegida la tarifa se selecciona la cantidad de entradas -->
+   <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    <div class="col" style=" left: 480px;">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">Cantidad de entradas</h4>
+        </div>
+        <div class="card-body">
+          <form>
+            <p class="my-0 fw-normal" style="font-size:130%;">Ingrese cantidad de entradas:</p>
+            <input type="text" id="my-0 fw-normal" name="my-0 fw-normal" value="25"><br>
+          </form>
+          <div>
+            <button type="button" class=" btn btn-lg btn-primary">Confirmar</button>
+            <button class="btn btn-outline-secondary btn-lg px-2">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tercer pantalla-->
+  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    <div class="col" style=" left: 480px;">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">Detalle Cantidad de entradas</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled mt-3 mb-4">
+            <p class="my-0 fw-normal" style="font-size:130%;">Cantidad de entradas: "X"</p>
+            <p class="my-0 fw-normal" style="font-size:130%;">Monto por entrada: "$X"</p>
+            <p class="my-0 fw-normal" style="font-size:130%;">Total: "$X"</p>
+          <button type="button" class=" btn btn-lg btn-primary">Confirmar</button>
+          <button class="btn btn-outline-secondary btn-lg px-2">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>     
+
+  </body>
 </html>
