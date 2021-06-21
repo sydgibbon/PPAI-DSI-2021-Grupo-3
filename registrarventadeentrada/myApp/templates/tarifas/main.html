@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+
+{% block head_content %}
+<title>Tarifas</title>
+{% endblock %}    
+
+{% block first_screen %}
+    {%include "tarifas/atomic/tarifas.html"%}
+{% endblock %}
+
+{% block second_screen %}
+    {%include "tarifas/atomic/ctdadEntradas.html"%}
+{% endblock %}
+
+{% block third_screen %}
+    {%include "tarifas/atomic/detalleEntradas.html"%}
+{% endblock %}
