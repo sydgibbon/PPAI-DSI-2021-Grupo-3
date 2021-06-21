@@ -21,3 +21,4 @@ class Exposicion(models.Model):
         exposiciones_vigentes = Exposicion.objects.get("poner condicion que permita extraer las exp vigentes")
         return exposiciones_vigentes
 
+

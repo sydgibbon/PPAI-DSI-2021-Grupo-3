@@ -49,3 +49,4 @@ class Sede(models.Model):
             tarifa = t.mostrarMontosVigentes()
         return tarifa
 
+

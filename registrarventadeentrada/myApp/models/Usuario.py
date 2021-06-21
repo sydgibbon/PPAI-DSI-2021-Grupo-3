@@ -12,4 +12,4 @@ class Usuario(models.Model):
 
     def obtenerEmpleado(self):
         empleado = Empleado.objects.get(id=dni)
-
+        return Empleado

@@ -54,5 +54,6 @@ class Tarifa(models.Model):
         tipovisita = TipoVisita.getnombre()
         tarifa = (monto,entrada,tipovisita)
         return tarifa
-    
+
+
     
