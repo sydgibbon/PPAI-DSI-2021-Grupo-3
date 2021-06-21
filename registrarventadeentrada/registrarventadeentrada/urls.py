@@ -21,7 +21,6 @@ from django.conf.urls import include, url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('list-posts/', local_views.list_posts),
     path('index/', local_views.index),
     url(r'^$', local_views.index, name='tarifas')
 ]
