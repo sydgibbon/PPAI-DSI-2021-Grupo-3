@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'registrarventadeentrada',
     'bootstrap4',
-    'myApp.apps.MyappConfig'
+    'myApp'
 ]
 
 MIDDLEWARE = [

@@ -22,5 +22,7 @@ from django.conf.urls import include, url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', local_views.index),
-    url(r'^$', local_views.index, name='tarifas')
+    url(r'^$', local_views.index, name='tarifas'),
+    url(r'^$', app_views.seleccionarTarifa, name='ctdadEntradas'),
+    url(r'^$', app_views.postCtdadEntradas, name='detalleEntradas')
 ]
