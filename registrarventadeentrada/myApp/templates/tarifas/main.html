@@ -2,17 +2,17 @@
 {% block head_content %}
 <title>Tarifas</title>
 {% endblock %}    
-{% if True %}
-{% block first_screen %}
-    {%include "tarifas/atomic/tarifas.html"%}
-{% endblock %}
-{% elif var1 %}
-{% block second_screen %}
-    {%include "tarifas/atomic/ctdadEntradas.html"%}
-{% endblock %}
-{% elif var1 %}
-{% block third_screen %}
-    {%include "tarifas/atomic/detalleEntradas.html"%}
-{% endblock %}
+{% if tarifas %}
+    {% block first_screen %}
+        {%include "tarifas/atomic/tarifas.html"%}
+    {% endblock %}
+{% elif form %}
+    {% block second_screen %}
+        {%include "tarifas/atomic/ctdadEntradas.html"%}
+    {% endblock %}
+{% elif idPost %}
+    {% block third_screen %}
+        {%include "tarifas/atomic/detalleEntradas.html"%}
+    {% endblock %}
 {% endif %}
 

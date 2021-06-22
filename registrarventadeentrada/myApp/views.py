@@ -66,15 +66,25 @@ def postDetalleEntradas(request):
     )
 
 def confirmarEntrada(request):
+    ctdadEntradas = int(request.POST.get('ctdadEntradas'))
     numero = request.POST.get('numero')
     monto = request.POST.get('monto')
     fechaVenta = datetime.strptime(request.POST.get('fechaVenta'), '%Y-%m-%d %H:%M:%S.%f')
     horaVenta = datetime.strptime(request.POST.get('horaVenta'), '%Y-%m-%d %H:%M:%S.%f')
     entrada = Entrada(numero = numero, monto = monto, fechaVenta = fechaVenta, horaVenta = horaVenta)
-    entrada.save()
-    return render(
-        request=request,
-        template_name='tarifas/exito.html',
-        context={
-        }
-    )
+    sede = Sede.objects.all()
+    if int(sede[0].cantMaximaVisitantes) >= ctdadEntradas:
+        entrada.save()
+        return render(
+            request=request,
+            template_name='tarifas/exito.html',
+            context={
+            }
+        )
+    else:
+        return render(
+            request=request,
+            template_name='tarifas/error.html',
+            context={
+            }
+        )

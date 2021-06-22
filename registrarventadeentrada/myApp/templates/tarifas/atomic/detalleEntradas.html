@@ -14,6 +14,7 @@
             <form action="/confirmado" method="POST">
             {% csrf_token %}
             <input type="hidden" name="numero" value="2">
+            <input type="hidden" name="ctdadEntradas" value="{{ctdadEntradas}}">
             <input type="hidden" name="monto" value="{%list tarifas idPost%}">
             <input type="hidden" name="horaVenta" value="{%returnHora%}">
             <input type="hidden" name="fechaVenta" value="{%returnDia%}">
