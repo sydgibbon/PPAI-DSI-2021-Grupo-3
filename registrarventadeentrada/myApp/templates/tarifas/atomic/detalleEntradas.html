@@ -1,3 +1,5 @@
+{%load tarifa_tags%}
+{%if idPost%}
 <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
     <div class="col" style=" left: 480px;">
       <div class="card mb-4 rounded-3 shadow-sm">
@@ -6,11 +8,20 @@
         </div>
         <div class="card-body">
           <ul class="list-unstyled mt-3 mb-4">
-            <p class="my-0 fw-normal" style="font-size:130%;">Cantidad de entradas: "X"</p>
-            <p class="my-0 fw-normal" style="font-size:130%;">Monto por entrada: "$X"</p>
-            <p class="my-0 fw-normal" style="font-size:130%;">Total: "$X"</p>
-          <button type="button" class="mt-2 btn btn-lg btn-primary" onclick="window.alert("uesa")">Confirmar</button>
+            <p class="my-0 fw-normal" style="font-size:130%;">Cantidad de entradas: "{{ctdadEntradas}}"</p>
+            <p class="my-0 fw-normal" style="font-size:130%;">Monto por entrada: "{%list tarifas idPost%}"</p>
+            <p class="my-0 fw-normal" style="font-size:130%;">Total: "${%total tarifas idPost ctdadEntradas%}"</p>
+            <form action="/confirmado" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="numero" value="2">
+            <input type="hidden" name="monto" value="{%list tarifas idPost%}">
+            <input type="hidden" name="horaVenta" value="{%returnHora%}">
+            <input type="hidden" name="fechaVenta" value="{%returnDia%}">
+
+          <button type="submit" class="mt-2 btn btn-lg btn-primary" onclick="window.alert("uesa")">Confirmar</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
+{%endif%}

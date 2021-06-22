@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row row-cols-md-3 mb-3 text-center">
     {%for tarifa in tarifas%}
-    <form action="{% url 'ctdadEntradas' %}" method="POST">
+    <form action="/ctdadEntradas" method="POST">
     {% csrf_token %}
     <div class="d-flex justify-content-between">
       <div class="card mb-4 rounded-3 shadow-sm">
@@ -29,7 +29,6 @@
         </div>
       </div>
     </div>
-    {{prueba}}
     </form>
     {%endfor%}
   </div>

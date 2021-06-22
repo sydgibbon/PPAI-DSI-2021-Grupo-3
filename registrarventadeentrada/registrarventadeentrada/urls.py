@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', local_views.index),
     url(r'^$', local_views.index, name='tarifas'),
-    url(r'^$', app_views.seleccionarTarifa, name='ctdadEntradas'),
-    url(r'^$', app_views.postCtdadEntradas, name='detalleEntradas')
+    url(r'^ctdadEntradas$', app_views.seleccionarTarifa),
+    url(r'^detalleEntradas$', app_views.postDetalleEntradas),
+    url(r'^confirmado$', app_views.confirmarEntrada)
 ]

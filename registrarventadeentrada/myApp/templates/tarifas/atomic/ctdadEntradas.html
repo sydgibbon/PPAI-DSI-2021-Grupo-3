@@ -5,11 +5,12 @@
         <h4 class="my-0 fw-normal">Cantidad de entradas</h4>
       </div>
       <div class="card-body">
-        <form action="{% url 'detalleEntradas' %}" method="POST">
+        <form action="/detalleEntradas" method="POST">
         {% csrf_token %}
           <p class="my-0 fw-normal" style="font-size: 130%">
             Ingrese cantidad de entradas:
           </p>
+          <input type="hidden" name="id" value="{{prueba}}">
           <input
             type="text"
             name="ctdadEntradas"
